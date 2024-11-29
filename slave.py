@@ -7,10 +7,8 @@ MASTER_ADDRESS = ('localhost', 5001)  # Address of the master node
 FILES = {}  # Dictionary to store files available for sharing
 
 def register_to_master(files, port):
-    """
-    Registers the slave and its available files with the master,
-    including the file-sharing port.
-    """
+
+# Registers the slave and its available files with the master including the file-sharing port.
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             print(f"Connecting to master at {MASTER_ADDRESS}")
@@ -24,9 +22,7 @@ def register_to_master(files, port):
         print(f"Error registering with master: {e}")
 
 def search_file(filename):
-    """
-    Searches for a file in the P2P network via the master.
-    """
+# Searches for a file in the P2P network via the master
     try:
         filename = filename.strip().lower()
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -43,9 +39,7 @@ def search_file(filename):
         return None
 
 def download_file(peer, filename):
-    """
-    Downloads a file from another peer.
-    """
+# Downloads a file from another peer
     try:
         peer_address, peer_port = peer
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -62,9 +56,7 @@ def download_file(peer, filename):
         print(f"Error downloading file: {e}")
 
 def serve_files(port):
-    """
-    Starts a server to share files with other peers on a specific port.
-    """
+# Starts a server to share files with other peers on a specific port
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.bind(('localhost', port))
     server.listen(5)

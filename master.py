@@ -6,9 +6,9 @@ PEERS = {}  # {address: (connection object, serving port)}
 FILES = {}  # {filename: (peer_address, serving_port)}
 
 def handle_peer(conn, addr):
-    """
-    Handles communication with a connected peer.
-    """
+
+# Handles communication with a connected peer.
+
     global PEERS, FILES
     try:
         while True:
@@ -48,9 +48,9 @@ def handle_peer(conn, addr):
         PEERS.pop(addr, None)
 
 def main():
-    """
-    Main function to start the master server.
-    """
+
+# Main function to start the master server.
+
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.bind(('localhost', 5001))  # Bind to a well-known port
     server.listen(5)  # Allow up to 5 pending connections
