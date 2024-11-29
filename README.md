@@ -2,10 +2,10 @@
 ## Torrens University
 
 ## Group 1
-1- Tammara Seychelle Capule Capa
-2- Anthony Ajero
-3- John Jewel Fernando Gomez
-4- Joaquin Antonio Morales Cardenas
+- Tammara Seychelle Capule Capa
+- Anthony Ajero
+- John Jewel Fernando Gomez
+- Joaquin Antonio Morales Cardenas
 
 ## How to Use
 
